@@ -50,7 +50,7 @@ class Auth extends Component {
 
   checkValidity(value, rules){
     let isValid = true;
-    console.log('rules: ', rules)
+    
     if(rules.required) {
       isValid = value.trim() !== ' ' && isValid;
     }

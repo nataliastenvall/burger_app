@@ -93,7 +93,7 @@ this.props.onOrderBurger(order, this.props.token);
 
   checkValidity(value, rules){
     let isValid = true;
-    console.log('rules: ', rules)
+
     if(rules.required) {
       isValid = value.trim() !== ' ' && isValid;
     }
@@ -109,11 +109,11 @@ this.props.onOrderBurger(order, this.props.token);
     const updatedOrderForm = {
       ...this.state.orderForm
     };
-    console.log('updatedOrderForm: ', updatedOrderForm)
+
     const updatedFormElement = {
       ...updatedOrderForm[inputIdentifier]
     };
-    console.log('updatedFormElement: ', updatedFormElement)
+  
     updatedFormElement.value = event.target.value;
     updatedFormElement.valid = this.checkValidity(updatedFormElement.value,
       updatedFormElement.validation);
